@@ -14,8 +14,9 @@
 
 	<properties>
 		<spring-boot.version>2.6.6</spring-boot.version>
+		<spring-native.version>0.11.4</spring-native.version>
 		<java.version>11</java.version>
-		<log4j2.version>2.17.1</log4j2.version><!-- CVE-2021-44832 -->
+		<log4j2.version>2.17.1</log4j2.version> <!-- CVE-2021-44832 -->
 	</properties>
 
 	<licenses>
@@ -35,9 +36,58 @@
 	<url>https://www.summerclouds.org</url>
 	<inceptionYear>2022</inceptionYear>
 
+	<!-- Configure only spring related versions and dependencies -->
+	<!-- All other versions must be configured in the common-bom project -->
+	<!-- In ths way the spring version depends on the used parent version, this will be the same version in future -->
+	<!-- used bom version is the current summerclouds version to use -->
 	<build>
 		<defaultGoal>install</defaultGoal>
+        <pluginManagement>
+            <plugins>
+				<plugin>
+		            <groupId>org.springframework.experimental</groupId>
+		            <artifactId>spring-aot-maven-plugin</artifactId>
+		            <version>${spring-native.version}</version>
+		            <executions>
+		                <execution>
+		                    <id>generate</id>
+		                    <goals>
+		                        <goal>generate</goal>
+		                    </goals>
+		                </execution>
+		            </executions>
+		        </plugin>
+            </plugins>
+        </pluginManagement>
 	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+		        <groupId>org.springframework.experimental</groupId>
+		        <artifactId>spring-native</artifactId>
+		        <version>${spring-native.version}</version>
+		    </dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<url>https://repo.spring.io/milestone</url>
+		</repository>
+		<repository>
+			<id>spring-release</id>
+			<url>https://repo.spring.io/release</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+	    <pluginRepository>
+	        <id>spring-release</id>
+	        <name>Spring release</name>
+	        <url>https://repo.spring.io/release</url>
+	    </pluginRepository>
+	</pluginRepositories>
 
 	<profiles>
 		<profile>
