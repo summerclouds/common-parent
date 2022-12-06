@@ -48,6 +48,7 @@ projects:
       order: 5
     properties:
       gitUrl: https://github.com/summerclouds/common-bom.git
+      version.changed: true
   - name: common-junit
     path: ../common-junit
     labels:
