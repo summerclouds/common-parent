@@ -321,6 +321,7 @@ lifecycles:
         target: con.maven
         arguments:
           - license:format
+          - "-P release"
         selector:
           group: prepare
 
