@@ -123,7 +123,7 @@
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>gpg-maven-plugin</artifactId>
+						<artifactId>maven-gpg-plugin</artifactId>
 						<version>${gpg.plugin.version}</version>
 						<configuration>
 							<passphrase>${gpg.passphrase}</passphrase>
