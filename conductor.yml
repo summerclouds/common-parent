@@ -63,7 +63,6 @@ projects:
     path: ../common-core-spring-boot-starter
     labels:
       group:
-        - parent
         - prepare
         - deploy
       order: 20
@@ -73,7 +72,6 @@ projects:
     path: ../common-db-spring-boot-starter
     labels:
       group:
-        - parent
         - prepare
         - deploy
       order: 30
@@ -83,7 +81,6 @@ projects:
     path: ../common-rest-spring-boot-starter
     labels:
       group:
-        - parent
         - prepare
         - deploy
       order: 40
@@ -93,7 +90,6 @@ projects:
     path: ../common-security-spring-boot-starter
     labels:
       group:
-        - parent
         - prepare
         - deploy
       order: 50
@@ -103,7 +99,6 @@ projects:
     path: ../common-sleuth-spring-boot-starter
     labels:
       group:
-        - parent
         - prepare
         - deploy
       order: 60
@@ -113,7 +108,6 @@ projects:
     path: ../common-crypt-spring-boot-starter
     labels:
       group:
-        - parent
         - prepare
         - deploy
       order: 70
