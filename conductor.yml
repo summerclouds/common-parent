@@ -17,7 +17,7 @@
 
 import:
   - default:configuration-default.yml
-#  - file:lifecycles.yml
+  - file:lifecycles.yml
 
 projects:
   - name: common-parent
