@@ -39,26 +39,24 @@ projects:
       property.common-security: common-security-spring-boot-starter.version
       property.common-sleuth: common-sleuth-spring-boot-starter.version
       property.common-crypt: common-crypt-spring-boot-starter.version
-  - name: common-junit
-    path: ../common-junit
-    labels:
-      group:
-        - parent
-        - prepare
-        - deploy
-      order: 5
-    properties:
-      gitUrl: https://github.com/summerclouds/common-junit.git
   - name: common-bom
     path: ../common-bom
     labels:
       group:
         - parent
+        - deploy
+      order: 5
+    properties:
+      gitUrl: https://github.com/summerclouds/common-bom.git
+  - name: common-junit
+    path: ../common-junit
+    labels:
+      group:
         - prepare
         - deploy
       order: 10
     properties:
-      gitUrl: https://github.com/summerclouds/common-bom.git
+      gitUrl: https://github.com/summerclouds/common-junit.git
   - name: common-core-spring-boot-starter
     path: ../common-core-spring-boot-starter
     labels:
