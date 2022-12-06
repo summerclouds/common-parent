@@ -1,0 +1,121 @@
+#
+# Copyright (C) 2019 Mike Hummel (mh@mhus.de)
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+
+import:
+  - default:configuration-default.yml
+#  - file:lifecycles.yml
+
+projects:
+  - name: common-parent
+    path: .
+    labels:
+      group:
+        - parent
+        - prepare
+        - deploy
+      order: 0
+    properties:
+      gitUrl: https://github.com/summerclouds/common-parent.git
+      property.common-junit: common-junit.version
+      property.common-parent: common-parent.version
+      property.common-bom: common-bom.version
+      property.common-core: common-core-spring-boot-starter.version
+      property.common-db: common-db-spring-boot-starter.version
+      property.common-rest: common-rest-spring-boot-starter.version
+      property.common-security: common-security-spring-boot-starter.version
+      property.common-sleuth: common-sleuth-spring-boot-starter.version
+      property.common-crypt: common-crypt-spring-boot-starter.version
+  - name: common-junit
+    path: ../common-junit
+    labels:
+      group:
+        - parent
+        - prepare
+        - deploy
+      order: 5
+    properties:
+      gitUrl: https://github.com/summerclouds/common-junit.git
+  - name: common-bom
+    path: ../common-bom
+    labels:
+      group:
+        - parent
+        - prepare
+        - deploy
+      order: 10
+    properties:
+      gitUrl: https://github.com/summerclouds/common-bom.git
+  - name: common-core-spring-boot-starter
+    path: ../common-core-spring-boot-starter
+    labels:
+      group:
+        - parent
+        - prepare
+        - deploy
+      order: 20
+    properties:
+      gitUrl: https://github.com/summerclouds/common-core-spring-boot-starter.git
+  - name: common-db-spring-boot-starter
+    path: ../common-db-spring-boot-starter
+    labels:
+      group:
+        - parent
+        - prepare
+        - deploy
+      order: 30
+    properties:
+      gitUrl: https://github.com/summerclouds/common-db-spring-boot-starter.git
+  - name: common-rest-spring-boot-starter
+    path: ../common-rest-spring-boot-starter
+    labels:
+      group:
+        - parent
+        - prepare
+        - deploy
+      order: 40
+    properties:
+      gitUrl: https://github.com/summerclouds/common-rest-spring-boot-starter.git
+  - name: common-security-spring-boot-starter
+    path: ../common-security-spring-boot-starter
+    labels:
+      group:
+        - parent
+        - prepare
+        - deploy
+      order: 50
+    properties:
+      gitUrl: https://github.com/summerclouds/common-security-spring-boot-starter.git
+  - name: common-sleuth-spring-boot-starter
+    path: ../common-sleuth-spring-boot-starter
+    labels:
+      group:
+        - parent
+        - prepare
+        - deploy
+      order: 60
+    properties:
+      gitUrl: https://github.com/summerclouds/common-sleuth-spring-boot-starter.git
+  - name: common-crypt-spring-boot-starter
+    path: ../common-crypt-spring-boot-starter
+    labels:
+      group:
+        - parent
+        - prepare
+        - deploy
+      order: 70
+    properties:
+      gitUrl: https://github.com/summerclouds/common-crypt-spring-boot-starter.git
