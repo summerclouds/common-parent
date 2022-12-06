@@ -68,6 +68,7 @@ lifecycles:
         target: con.maven
         arguments:
           - "git-code-format:format-code '-DglobPattern=**/*'"
+          - "-P release"
         selector:
           version.changed: true
           group: prepare

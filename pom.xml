@@ -17,6 +17,7 @@
 		<spring-native.version>0.11.4</spring-native.version>
 		<java.version>11</java.version>
 		<log4j2.version>2.17.1</log4j2.version> <!-- CVE-2021-44832 -->
+		<maven-git-code-format.version>1.32</maven-git-code-format.version>
 	</properties>
 
 	<licenses>
@@ -195,6 +196,22 @@
 								</goals>
 							</execution>
 						</executions>
+					</plugin>
+					<!-- https://github.com/Cosium/maven-git-code-format -->
+					<!-- https://en.wikipedia.org/wiki/Glob_(programming) -->
+					<plugin>
+						<groupId>com.cosium.code</groupId>
+						<artifactId>maven-git-code-format</artifactId>
+						<version>${maven-git-code-format.version}</version>
+						<configuration>
+							<googleJavaFormatOptions>
+								<aosp>true</aosp>
+								<fixImportsOnly>false</fixImportsOnly>
+								<skipSortingImports>true</skipSortingImports>
+								<skipRemovingUnusedImports>false</skipRemovingUnusedImports>
+							</googleJavaFormatOptions>
+							<globPattern>**/[!_]*</globPattern>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>
