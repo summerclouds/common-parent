@@ -19,6 +19,10 @@
 		<log4j2.version>2.17.1</log4j2.version> <!-- CVE-2021-44832 -->
 		<maven-git-code-format.version>1.32</maven-git-code-format.version>
 		<nexus.plugin.version>1.6.8</nexus.plugin.version>
+		<gpg.plugin.version>3.0.1</gpg.plugin.version>
+		<source.plugin>2.2.1</source.plugin>
+		<tmpl.plugin.version>1.1.0</tmpl.plugin.version>
+		<license.plugin.version>2.11.1</license.plugin.version>
 	</properties>
 
 	<licenses>
