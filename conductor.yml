@@ -42,12 +42,12 @@ projects:
       property.common-junit: common-junit.version
       property.common-parent: common-parent.version
       property.common-bom: common-bom.version
-      property.common-core: common-core-spring-boot-starter.version
-      property.common-db: common-db-spring-boot-starter.version
-      property.common-rest: common-rest-spring-boot-starter.version
-      property.common-security: common-security-spring-boot-starter.version
-      property.common-sleuth: common-sleuth-spring-boot-starter.version
-      property.common-crypt: common-crypt-spring-boot-starter.version
+      property.common-core-spring-boot-starter: common-core-spring-boot-starter.version
+      property.common-db-spring-boot-starter: common-db-spring-boot-starter.version
+      property.common-rest-spring-boot-starter: common-rest-spring-boot-starter.version
+      property.common-security-spring-boot-starter: common-security-spring-boot-starter.version
+      property.common-sleuth-spring-boot-starter: common-sleuth-spring-boot-starter.version
+      property.common-crypt-spring-boot-starter: common-crypt-spring-boot-starter.version
   - name: common-junit
     path: ../common-junit
     labels:
