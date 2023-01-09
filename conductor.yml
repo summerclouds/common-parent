@@ -40,14 +40,12 @@ projects:
     properties:
       gitUrl: https://github.com/summerclouds/common-bom.git
       property.common-junit: common-junit.version
-      property.common-parent: common-parent.version
-      property.common-bom: common-bom.version
-      property.common-core-spring-boot-starter: common-core-spring-boot-starter.version
-      property.common-db-spring-boot-starter: common-db-spring-boot-starter.version
-      property.common-rest-spring-boot-starter: common-rest-spring-boot-starter.version
-      property.common-security-spring-boot-starter: common-security-spring-boot-starter.version
-      property.common-sleuth-spring-boot-starter: common-sleuth-spring-boot-starter.version
-      property.common-crypt-spring-boot-starter: common-crypt-spring-boot-starter.version
+      property.common-core-spring-boot-starter: common-core.version
+      property.common-db-spring-boot-starter: common-db.version
+      property.common-rest-spring-boot-starter: common-rest.version
+      property.common-security-spring-boot-starter: common-security.version
+      property.common-sleuth-spring-boot-starter: common-sleuth.version
+      property.common-crypt-spring-boot-starter: common-crypt.version
   - name: common-junit
     path: ../common-junit
     labels:
