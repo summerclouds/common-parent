@@ -288,12 +288,12 @@ lifecycles:
           group: bundle
           version.changed: true
 
-      #  - title: compile templated files - snapshot
-      #    target: con.maven
-      #    arguments:
-      #    - de.mhus.mvn.plugin:tmpl-maven-plugin:1.1.0:tmpl
-      #    selector:
-      #      version.changed: true
+        - title: compile templated files - snapshot
+          target: con.maven
+          arguments:
+          - de.mhus.mvn.plugin:tmpl-maven-plugin:2.0.0:tmpl
+          selector:
+            version.changed: true
 
       # #####################
       # Commit Snapshot
