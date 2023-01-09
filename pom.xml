@@ -126,7 +126,7 @@
 						<artifactId>maven-gpg-plugin</artifactId>
 						<version>${gpg.plugin.version}</version>
 						<configuration>
-							<passphrase>${gpg.passphrase}</passphrase>
+							<passphraseServerId>gpg.passphrase</passphraseServerId>
 						</configuration>
 						<executions>
 							<execution>
