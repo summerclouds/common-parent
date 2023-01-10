@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.summerclouds.common</groupId>
 	<artifactId>common-parent</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<parent>
@@ -34,8 +34,8 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/mhus/mhus-parent</url>
-		<connection>scm:git:https://github.com/summerclouds/summer-parent/</connection>
+		<url>https://github.com/summerclouds/common-parent</url>
+		<connection>scm:git:https://github.com/summerclouds/common-parent/</connection>
 		<tag>HEAD</tag>
 	</scm>
 
