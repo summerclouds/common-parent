@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.summerclouds.common</groupId>
 	<artifactId>common-parent</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<parent>
@@ -11,6 +11,9 @@
 		<version>2.6.6</version>
 		<relativePath />
 	</parent>
+
+	<name>common-parent</name>
+	<description>Parent pom providing dependency and plugin management for applications built with Maven</description>
 
 	<properties>
 		<spring-boot.version>2.6.6</spring-boot.version>
@@ -41,6 +44,14 @@
 
 	<url>https://www.summerclouds.org</url>
 	<inceptionYear>2022</inceptionYear>
+	<developers>
+		<developer>
+			<id>mhu</id>
+			<name>Mike Hummel</name>
+			<email>mh@mhus.de</email>
+			<url>http://www.mhus.de</url>
+		</developer>
+	</developers>
 
 	<!-- Configure only spring related versions and dependencies -->
 	<!-- All other versions must be configured in the common-bom project -->
