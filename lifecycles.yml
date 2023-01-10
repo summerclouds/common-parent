@@ -125,7 +125,7 @@ lifecycles:
           version.changed: true
           group: bundle
         properties:
-          version: ${projects.mhus-parent.version}
+          version: ${projects.common-parent.version}
 
       - title: Set new project version
         target: con.maven
