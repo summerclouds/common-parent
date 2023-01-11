@@ -51,6 +51,7 @@ projects:
     labels:
       group:
         - prepare
+        - jar
         - deploy
       order: 10
     properties:
@@ -60,6 +61,7 @@ projects:
     labels:
       group:
         - prepare
+        - jar
         - deploy
       order: 20
     properties:
@@ -69,6 +71,7 @@ projects:
     labels:
       group:
         - prepare
+        - jar
         - deploy
       order: 30
     properties:
@@ -78,6 +81,7 @@ projects:
     labels:
       group:
         - prepare
+        - jar
         - deploy
       order: 40
     properties:
@@ -87,6 +91,7 @@ projects:
     labels:
       group:
         - prepare
+        - jar
         - deploy
       order: 50
     properties:
@@ -96,6 +101,7 @@ projects:
     labels:
       group:
         - prepare
+        - jar
         - deploy
       order: 60
     properties:
@@ -105,6 +111,7 @@ projects:
     labels:
       group:
         - prepare
+        - jar
         - deploy
       order: 70
     properties:

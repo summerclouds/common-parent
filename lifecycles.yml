@@ -134,7 +134,7 @@ lifecycles:
           - "-DnewVersion=${project.version}"
         selector:
           version.changed: true
-          group: bundle
+          group: jar
 
       - title: Compile Projects
         target: con.maven
@@ -144,7 +144,7 @@ lifecycles:
           - "-P release"
         sort: order
         selector:
-          group: bundle
+          group: jar
           version.changed: true
 
       - title: Validate No Snapshots
@@ -155,7 +155,7 @@ lifecycles:
         sort: order
         selector:
           version.changed: true
-          group: bundle
+          group: jar
 
       - title: Deploy Projects
         target: con.maven
@@ -165,22 +165,13 @@ lifecycles:
         sort: order
         selector:
           group:
-            - bundle
             - deploy
           version.changed: true
 
 
       # #####################
-      # finally Deploy Parent
+      # Post actions
       # #####################
-
-      - title: Deploy Parent
-        target: con.maven
-        arguments:
-          - deploy
-          - '-P release'
-        selector:
-          group: parent
 
       - title: Save version history
         target: con.persistNewVersions
