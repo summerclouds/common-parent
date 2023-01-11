@@ -123,7 +123,7 @@ lifecycles:
         target: con.updatePomParentVersion
         selector:
           version.changed: true
-          group: bundle
+          group: jar
         properties:
           version: ${projects.common-parent.version}
 
@@ -248,7 +248,7 @@ lifecycles:
       - title: Set snapshot parent version
         target: con.updatePomParentVersion
         selector:
-          group: bundle
+          group: deploy
         sort: order
         properties:
           version: ${projects.mhus-parent.version}
@@ -261,7 +261,7 @@ lifecycles:
           - "-DnewVersion=${project.version}"
         sort: order
         selector:
-          group: bundle
+          group: deploy
           version.changed: true
 
       # #####################
@@ -274,7 +274,7 @@ lifecycles:
           - 'install -fn'
         sort: order
         selector:
-          group: bundle
+          group: deploy
           version.changed: true
 
       - title: compile templated files - snapshot
