@@ -83,6 +83,14 @@ lifecycles:
           group: prepare
 
       # #####################
+      # Update versions
+      # #####################
+      - title: Set new version properties
+        target: con.updatePomProperties
+        selector:
+          version.changed: true
+          
+      # #####################
       # Update and build parent
       # #####################
       - title: Set new project version
