@@ -66,6 +66,7 @@ projects:
       order: 20
     properties:
       gitUrl: https://github.com/summerclouds/common-core-spring-boot-starter.git
+      property.common-bom: summerclouds.bom.version
   - name: common-db-spring-boot-starter
     path: ../common-db-spring-boot-starter
     labels:
@@ -76,6 +77,7 @@ projects:
       order: 30
     properties:
       gitUrl: https://github.com/summerclouds/common-db-spring-boot-starter.git
+      property.common-bom: summerclouds.bom.version
   - name: common-rest-spring-boot-starter
     path: ../common-rest-spring-boot-starter
     labels:
@@ -86,6 +88,7 @@ projects:
       order: 40
     properties:
       gitUrl: https://github.com/summerclouds/common-rest-spring-boot-starter.git
+      property.common-bom: summerclouds.bom.version
   - name: common-security-spring-boot-starter
     path: ../common-security-spring-boot-starter
     labels:
@@ -96,6 +99,7 @@ projects:
       order: 50
     properties:
       gitUrl: https://github.com/summerclouds/common-security-spring-boot-starter.git
+      property.common-bom: summerclouds.bom.version
   - name: common-sleuth-spring-boot-starter
     path: ../common-sleuth-spring-boot-starter
     labels:
@@ -106,6 +110,7 @@ projects:
       order: 60
     properties:
       gitUrl: https://github.com/summerclouds/common-sleuth-spring-boot-starter.git
+      property.common-bom: summerclouds.bom.version
   - name: common-crypt-spring-boot-starter
     path: ../common-crypt-spring-boot-starter
     labels:
@@ -116,3 +121,4 @@ projects:
       order: 70
     properties:
       gitUrl: https://github.com/summerclouds/common-crypt-spring-boot-starter.git
+      property.common-bom: summerclouds.bom.version
