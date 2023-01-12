@@ -49,11 +49,6 @@ lifecycles:
       - title: Calculate new versions
         target: con.calculateNewVersion
 
-      - title: Set new version properties
-        target: con.updatePomProperties
-        selector:
-          version.changed: true
-
       - title: Confirm New Versions
         target: confirm
         properties:
