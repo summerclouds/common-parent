@@ -26,7 +26,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.6</version>
+		<version>3.0.1</version>
 		<relativePath/>
 	</parent>
 
@@ -34,10 +34,9 @@
 	<description>Parent pom providing dependency and plugin management for applications built with Maven</description>
 
 	<properties>
-		<spring-boot.version>2.6.6</spring-boot.version>
+		<spring-boot.version>3.0.1</spring-boot.version>
 		<spring-native.version>0.11.4</spring-native.version>
-		<java.version>11</java.version>
-		<log4j2.version>2.17.1</log4j2.version> <!-- CVE-2021-44832 -->
+		<java.version>17</java.version>
 		<maven-git-code-format.version>1.32</maven-git-code-format.version>
 		<nexus.plugin.version>1.6.13</nexus.plugin.version>
 		<gpg.plugin.version>3.0.1</gpg.plugin.version>
@@ -80,49 +79,27 @@
         <pluginManagement>
             <plugins>
 				<plugin>
-		            <groupId>org.springframework.experimental</groupId>
-		            <artifactId>spring-aot-maven-plugin</artifactId>
-		            <version>${spring-native.version}</version>
-		            <executions>
-		                <execution>
-		                    <id>generate</id>
-		                    <goals>
-		                        <goal>generate</goal>
-		                    </goals>
-		                </execution>
-		            </executions>
-		        </plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<configuration>
+						<image>
+							<env>
+								<BP_JVM_VERSION>${java.version}</BP_JVM_VERSION>
+							</env>
+						</image>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.graalvm.buildtools</groupId>
+					<artifactId>native-maven-plugin</artifactId>
+				</plugin>
             </plugins>
         </pluginManagement>
 	</build>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-		        <groupId>org.springframework.experimental</groupId>
-		        <artifactId>spring-native</artifactId>
-		        <version>${spring-native.version}</version>
-		    </dependency>
-		</dependencies>
-	</dependencyManagement>
-
-	<repositories>
-		<repository>
-			<id>spring-milestones</id>
-			<url>https://repo.spring.io/milestone</url>
-		</repository>
-		<repository>
-			<id>spring-release</id>
-			<url>https://repo.spring.io/release</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-	    <pluginRepository>
-	        <id>spring-release</id>
-	        <name>Spring release</name>
-	        <url>https://repo.spring.io/release</url>
-	    </pluginRepository>
-	</pluginRepositories>
 
 	<profiles>
 		<profile>
